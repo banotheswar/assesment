@@ -6,4 +6,13 @@
 }
 .link{
   text-decoration: none;
+  width: 250px ;
+}
+.left{
+  margin-left: 256px;
+}
+.box{
+  width: 50px;
+  height: 55px;
+  background-color: lightgray;
 }

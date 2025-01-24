@@ -2,10 +2,12 @@ import { Modal } from 'react-bootstrap'
 import React, { useState } from 'react'
 import Componet1 from './Componet1';
 import Componet2 from './Componet2';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const Card = () => {
     const [show,setShow]=useState(false);
     const [data,setData]=useState({});
+    const navigate=useNavigate()
     const handleChange=(name)=>(event)=>{
         setData({
             ...data,
@@ -79,7 +81,11 @@ This doesn’t include documentation, source files, or any optional JavaScript d
     {dropdow()}
     </div>
     {data?.componet=="v1"?<Componet1/>:data?.componet=="v2"?<Componet2/>:""}
+    <div className='d-flex justify-content-center'>
+    <NavLink to={"/sidebar/todo"} className='btn border' > Go to Drag onDrop</NavLink>
     </div>
+    </div>
+   
     </>
   )
 }
